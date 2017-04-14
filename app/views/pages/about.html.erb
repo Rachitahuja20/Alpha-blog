@@ -1,0 +1,85 @@
+<html>
+<head>
+	
+	<title>Ruby Page</title>
+<style>
+div.container {
+    
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+.para {
+     /* remove the inline CSS and use this instead */
+}
+
+.paraa {
+     /* remove the inline CSS and use this instead */
+}
+
+.combine {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+
+<header>
+   <h1>RUBY</h1>
+</header>
+
+<div align="center" style="background-color:white;color:black;padding: 0px;align:center">
+	<%= image_tag("ruby-banner.png", :alt => "Ruby logo") %> 
+</div> 
+<div class = "combine">
+  <div class ="para" style="background-color:white;color:green;padding:20px;">
+
+    <p>Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan. According to its creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp.[11] It supports multiple programming paradigms, including functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management.</p>
+    <p>SThe name "Ruby" originated during an online chat session between Matsumoto and Keiju Ishitsuka on February 24,, 1993, before any code had been written for the language.[14] Initially two names were proposed: "Coral" and "Ruby". Matsumoto chose the latter in a later e-mail to Ishitsuka.[15] Matsumoto later noted a factor in choosing the name "Ruby" – it was the birthstone of one of his colleagues</p>
+  </div> 
+<div class ="paraa" style="background-color:white;color:green;padding:20px;">
+  <p>Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan. According to its creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp.[11] It supports multiple programming paradigms, including functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management.</p>
+    <p>SThe name "Ruby" originated during an online chat session between Matsumoto and Keiju Ishitsuka on February 24,, 1993, before any code had been written for the language.[14] Initially two names were proposed: "Coral" and "Ruby". Matsumoto chose the latter in a later e-mail to Ishitsuka.[15] Matsumoto later noted a factor in choosing the name "Ruby" – it was the birthstone of one of his colleagues</p>
+  </div> 
+</div>
+
+<footer>
+   <h1><%= link_to 'Home', root_path %></h1>
+</footer>
+
+</body>
+</html>
