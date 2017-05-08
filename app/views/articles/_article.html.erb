@@ -14,10 +14,13 @@
                               <%= time_ago_in_words(curarticle.updated_at) %> ago 
           </small>
         </div>
-        <div class="article-actions">
-          <%= link_to "Edit", edit_article_path(curarticle), class: "btn btn-xs btn-primary" %>
-          <%= link_to "Delete", article_path(curarticle), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure"} %></td>
-        </div>
+        
+        <% if logged_in? && current_user == curarticle.user %>
+          <div class="article-actions">
+            <%= link_to "Edit", edit_article_path(curarticle), class: "btn btn-xs btn-primary" %>
+            <%= link_to "Delete", article_path(curarticle), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure"} %></td>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
