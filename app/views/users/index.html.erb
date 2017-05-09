@@ -13,10 +13,14 @@
           <li><small>
             <%= pluralize(user.articles.count, "article") if user.articles %>
           </small></li>
-           <div class="article-actions">
-          <%= link_to "Edit", edit_user_path(user), class: "btn btn-xs btn-primary" %>
-          <%= link_to "Delete", user_path(user), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure"} %></td>
-        </div>
+          <% if logged_in? %>
+            <% if current_user == user || current_user.admin? %>
+              <div class="article-actions">
+              <%= link_to "Edit", edit_user_path(user), class: "btn btn-xs btn-primary" %>
+              <%= link_to "Delete", user_path(user), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure"} %></td>
+              </div>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </ul>

@@ -15,7 +15,7 @@
           </small>
         </div>
         
-        <% if logged_in? && current_user == curarticle.user %>
+        <% if logged_in? && (current_user == curarticle.user || current_user.admin?) %>
           <div class="article-actions">
             <%= link_to "Edit", edit_article_path(curarticle), class: "btn btn-xs btn-primary" %>
             <%= link_to "Delete", article_path(curarticle), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure"} %></td>
